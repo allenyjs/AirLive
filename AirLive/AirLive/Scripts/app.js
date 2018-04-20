@@ -13,6 +13,15 @@ airApp.config(function ($routeProvider) {
     });
 });
 
-airApp.controller('mainCtrl', ['$scope', function (scp) {
+airApp.controller('mainCtrl', ['$scope', '$http', function (scp, client) {
+    var apiUrl = "api/CountysGet";
+    client({
+        method: "GET",
+        url: apiUrl
+    }).then(function mySuccess(response) {
+        console.log(response);
+    }, function myError(response) {
+        scp.msg = response.statusText;
+    });
     alert("mainCtrl");
 }]);
