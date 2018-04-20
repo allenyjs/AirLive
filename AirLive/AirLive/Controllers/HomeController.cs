@@ -14,5 +14,9 @@ namespace AirLive.Controllers
 
             return View();
         }
+        public ActionResult AirInfo()
+        {
+            return View();
+        }
     }
 }
