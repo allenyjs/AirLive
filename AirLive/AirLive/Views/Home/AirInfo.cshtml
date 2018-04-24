@@ -4,5 +4,18 @@
 }
 
 <div>
-    AirInfo
+    空氣品質
+</div>
+<div id="Menus">
+    <select ng-model="selectedCounty" ng-options="county for county in Countys" ng-change="initSides()"></select>
+    <select ng-model="selectedSide" ng-options="side for side in Sides" ng-change="initAQI()"></select>
+</div>
+<div>
+   AQI: {{AQI.AQI}}
+</div>
+<div>
+   PM2.5: {{AQI._PM2point5}}
+</div>
+<div>
+   PM10: {{AQI.PM10}}
 </div>

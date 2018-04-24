@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-
+using Newtonsoft.Json;
 namespace AirLive.Models
 {
     public class modelAQI
@@ -27,7 +27,13 @@ namespace AirLive.Models
         public string PM10_AVG { get; set; }
         public string Latitude { get; set; }
         public string Longitude { get; set; }
-        //public string __invalid_name__PM2.5 { get; set; }
-        //public string __invalid_name__PM2.5_AVG { get; set; }
-    }
+        public string _PM2point5 { get; set; }
+        [JsonProperty(PropertyName = "PM2.5")]
+        public string PM2point5
+        {
+            get { return _PM2point5; }
+            set { _PM2point5 = value; }
+        }
+    //public string __invalid_name__PM2.5_AVG { get; set; }
+}
 }
