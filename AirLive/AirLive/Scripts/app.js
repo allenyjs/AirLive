@@ -47,6 +47,15 @@ airApp.controller('mainCtrl', ['$scope', '$http', function (scp, client) {
         }).then(function mySuccess(response) {
             console.log(response);
             scp.AQI = response.data;
+
+            scp.aqiranges = [
+                    { indexval: 1, rangetext: "0~50" },
+                    { indexval: 2, rangetext: "51~100" },
+                    { indexval: 3, rangetext: "101~150" },
+                    { indexval: 4, rangetext: "151~200" },
+                    { indexval: 5, rangetext: "201~300" },
+                    { indexval: 6, rangetext: "301~500" },
+            ];
         }, function myError(response) {
             scp.errormsg = response.statusText;
         });
@@ -57,4 +66,19 @@ airApp.controller('mainCtrl', ['$scope', '$http', function (scp, client) {
     scp.initSides();
     scp.selectedSide = "中山";
     scp.initAQI();
+
+    
 }]);
+//http://www.globalmednews.tw/epaper.php?no=211
+
+airApp.directive("levelBarAqi", function () {
+    return {
+        restrict: 'AECM',
+        templateUrl: 'directives/levelBar.html',
+        replace: true,
+        scope: {
+            levelbarIndexval: "@",
+            levelbarRangetext: "@",
+        }
+    }
+});
