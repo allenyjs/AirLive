@@ -2,3 +2,129 @@
 body
 {
 }
+$totalWidthAqi : 300;
+$AqiLeveWidth50 : (100vw / $totalWidthAqi) * 50;
+$AqiLeveWidth100 : (100vw / $totalWidthAqi) * 100;
+
+$totalWidthPM25 : 58;
+$PM25LeveWidth11 : (100vw / $totalWidthPM25) * 11;
+$PM25LeveWidth12 : (100vw / $totalWidthPM25) * 12;
+$PM25LeveWidth6 : (100vw / $totalWidthPM25) * 6;
+$PM25LeveWidth5 : (100vw / $totalWidthPM25) * 5;
+
+.container {
+    .subjectpanel{
+        .levelbar{
+             
+            .Indicators{
+                color: red;
+                width: 30px;
+                text-align: center;
+                .airval{
+                    border: 1px solid #673ab7;
+                    border-radius: 13px;
+                    height: 24px;
+                    line-height: 24px;
+                    background: #3F51B5;
+                    color: #f9ee91;
+                    position: relative;
+                    top: 7px;
+                }
+            }
+            &.levelaqi{
+                font-size: 17px;
+                font-weight: bold;
+                font-family: sans-serif;
+                .level{
+                    display: inline-block;
+                    width: 16.6vw;
+                    text-align: center;
+                    background-color: #00e400;
+                    line-height: 42px;
+                    &.level1{
+                        background-color:#00e400;
+                        width: $AqiLeveWidth50;
+                    }
+                    &.level2{
+                        background-color:#ff0;
+                        width: $AqiLeveWidth50;
+                    }
+                    &.level3{
+                        background-color:#ff7e00;
+                        width: $AqiLeveWidth50;
+                    }
+                    &.level4{
+                        background-color:#f00;
+                        width: $AqiLeveWidth50;
+                    }
+                    &.level5{
+                        background-color:#99004c;
+                        width: $AqiLeveWidth100;
+                    }
+                    /*&.level6{
+                        background-color:#7e0023;
+                        width: calc((100vw / 500) * 200);
+                    }*/
+                }
+            }
+            &.levelpm25{
+                font-size: 17px;
+                font-weight: bold;
+                font-family: sans-serif;
+                .level{
+                    display: inline-block;
+                    width: 16.6vw;
+                    text-align: center;
+                    background-color: #9cff9c;
+                    line-height: 42px;
+                    &.level1{
+                        background-color:#9cff9c;
+                        width: $PM25LeveWidth11;
+                    }
+                    &.level2{
+                        background-color:#31ff00;
+                        width: $PM25LeveWidth12;
+                    }
+                    &.level3{
+                        background-color:#31cf00;
+                        width: $PM25LeveWidth12;
+                    }
+                    &.level4{
+                        background-color:#ff0;
+                        width: $PM25LeveWidth6;
+                        font-size: 12px;
+                    }
+                    &.level5{
+                        background-color:#ffcf00;
+                        width: $PM25LeveWidth6;
+                        font-size: 12px;
+                    }
+                    &.level6{
+                        background-color:#ff9a00;
+                        width: $PM25LeveWidth6;
+                        font-size: 12px;
+                    }
+                    &.level7{
+                        background-color:#ff6464;
+                        width: $PM25LeveWidth5;
+                        font-size: 12px;
+                    }
+                    &.level8{
+                        background-color:#99004c;
+                        width: $PM25LeveWidth6;
+                        font-size: 12px;
+                    }
+                    &.level9{
+                        background-color:#99004c;
+                        width: $PM25LeveWidth6;
+                        font-size: 12px;
+                    }
+                    &.level10{
+                        background-color:#99004c;
+                        width: 1px;
+                    }
+                }
+            }
+        }
+    }
+}

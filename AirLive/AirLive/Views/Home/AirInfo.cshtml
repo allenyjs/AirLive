@@ -4,35 +4,58 @@
 }
 
 <div>
-    空氣品質
+    <!--空氣品質-->
 </div>
 <div id="Menus">
     <select ng-model="selectedCounty" ng-options="county for county in Countys" ng-change="initSides()"></select>
     <select ng-model="selectedSide" ng-options="side for side in Sides" ng-change="initAQI()"></select>
 </div>
-<div>
-   AQI: {{AQI.AQI}}
-    <div class="levelbar">
+<div class="subjectpanel">
+    <div class="subject">
+        <span>AQI: </span>
+        <span>{{AQI.AQI}}</span>
+    </div>
+    <div class="levelbar levelaqi">
+        <div class="Indicators" ng-style="IndicatorsAqiObj">
+            <div class="airval">{{currentAQIText}}</div>
+            <div class="Indicators-arrow">|</div>
+        </div>
         <level-bar-aqi levelbar-indexval="{{ levelbar.indexval }}"
                        levelbar-rangetext="{{ levelbar.rangetext }}"
                        ng-repeat="levelbar in aqiranges">
         </level-bar-aqi>
     </div>
-</div>
-<div>
-   PM2.5: {{AQI._PM2point5}}
     <br>
-    1-11
-    12-23
-    24-35
-    36-41
-    42-47
-    48-53
-    54-58
-    59-64
-    65-70
-    71
 </div>
-<div>
-   PM10: {{AQI.PM10}}
+
+<div class="subjectpanel">
+    <div class="subject">
+        <span> PM2.5: </span>
+        <span>{{AQI._PM2point5}}</span>
+    </div>
+    <div class="levelbar levelpm25">
+        <div class="Indicators" ng-style="IndicatorsPM25Obj">
+            <div class="airval">{{currentPM25Text}}</div>
+            <div class="Indicators-arrow">|</div>
+        </div>
+        <level-bar-pm25 levelbar-indexval="{{ levelbar.indexval }}"
+                        levelbar-rangetext="{{ levelbar.rangetext }}"
+                        ng-repeat="levelbar in pm25ranges">
+        </level-bar-pm25>
+    </div>
+    <br>
+</div>
+
+<div class="subjectpanel">
+    <div class="subject">
+        <span> PM10: </span>
+        <span>{{AQI.PM10}}</span>
+    </div>
+    <div class="levelbar levelpm10">
+        <level-bar-pm10 levelbar-indexval="{{ levelbar.indexval }}"
+                        levelbar-rangetext="{{ levelbar.rangetext }}"
+                        ng-repeat="levelbar in pm10ranges">
+        </level-bar-pm10>
+    </div>
+    <br>
 </div>
