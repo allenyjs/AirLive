@@ -30,8 +30,8 @@ namespace AirLive
 
             bundles.Add(new ScriptBundle("~/bundles/AgnularJs").Include(
             "~/Scripts/angular.min.js",
-            "~/Scripts/angular*",
-            "~/Scripts/app.js"));
+            "~/Scripts/angular*"
+            ));
         }
     }
 }
