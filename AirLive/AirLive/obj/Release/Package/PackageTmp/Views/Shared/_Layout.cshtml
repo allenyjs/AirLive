@@ -5,10 +5,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
 
-    <title>@ViewBag.Title</title>
+    <title>airqlive-台灣空氣品質AQI</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @*@Scripts.Render("~/bundles/AgnularJs")*@
+
+    <link href="~/images/aq.png" rel="apple-touch-icon" />
+    <link href="~/images/aq.png" rel="apple-touch-icon" sizes="76x76" />
+    <link href="~/images/aq.png" rel="apple-touch-icon" sizes="120x120" />
+    <link href="~/images/aq.png" rel="apple-touch-icon" sizes="152x152" />
+    <link href="~/images/aq.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="~/images/aq.png" rel="icon" sizes="192x192" />
+    <link href="~/images/aq.png" rel="icon" sizes="128x128" />
+
 </head>
 
 <body>
@@ -20,5 +29,17 @@
     <script src="~/Scripts/angular.min.js"></script>
     <script src="~/Scripts/angular-route.min.js"></script>
     <script src="~/Scripts/app.js"></script>
+    <script type="application/ld+json">
+        {
+        "@@context": "http://schema.org",
+        "@@type": "WebSite",
+        "url": "https://airqlive.azurewebsites.net",
+        "keywords": "空氣品質,台灣,空污,空汙,懸浮微粒,AQI,PM2.5,PM10,空氣汙染,空氣污染,空氣監測,air quality,airqlive",
+        "description": "台灣空氣品質AQI、PM2.5、PM10資訊",
+        "headline": "airqlive-台灣空氣品質AQI",
+        "name": "airqlive-台灣空氣品質AQI",
+        "datePublished": "2018-04-26"
+        }
+    </script>
 </body>
 </html>

@@ -3,12 +3,30 @@
     Layout = null;
 }
 
-<div>
-    <!--空氣品質-->
+<div class="title2">
+   地區選擇
 </div>
-<div id="Menus">
-    <select ng-model="selectedCounty" ng-options="county for county in Countys" ng-change="initSides()"></select>
-    <select ng-model="selectedSide" ng-options="side for side in Sides" ng-change="initAQI()"></select>
+<div id="Menus" class="menus">
+    <div class="menuitem menucountys">
+        <span>
+            縣市: 
+        </span>
+        <span class="selectbox conuntyselect">
+            <select ng-model="selectedCounty" ng-options="county for county in Countys" ng-change="initSides()"></select>
+        </span>
+    </div>
+
+    <div class="menuitem menusides">
+        <span>
+            站點: 
+        </span>
+        <span class="selectbox sideselect">
+            <select ng-model="selectedSide" ng-options="side for side in Sides" ng-change="initAQI()">
+                <option>請選擇...</option>
+            </select>
+        </span>
+    </div>
+    
 </div>
 <div class="subjectpanel">
     <div class="subject">

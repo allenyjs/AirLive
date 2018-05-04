@@ -15,9 +15,9 @@ namespace AirLive.Controllers
     public class ValuesController : ApiController
     {
         private static List<modelAQI> sourceAQIs;
+        private AQIService _AQIService = new AQIService();
         public ValuesController()
         {
-            AQIService _AQIService = new AQIService();
             Task.Run(async () =>
             {
                 sourceAQIs = await _AQIService.AQIs();
@@ -32,7 +32,7 @@ namespace AirLive.Controllers
             try
             {
                 List<modelAQI> _AQIs = new List<modelAQI>();
-                _AQIs = sourceAQIs;
+                _AQIs = await initCheck();
                 var filterResult = _AQIs.Where(m => m.County == County && m.SiteName == SiteName);
                 if (filterResult.Any())
                 {
@@ -52,7 +52,7 @@ namespace AirLive.Controllers
             try
             {
                 List<modelAQI> _AQIs = new List<modelAQI>();
-                _AQIs = sourceAQIs;
+                _AQIs = await initCheck();
                 var filterResult = _AQIs.Select(m => m.County).Distinct();
                 if (filterResult.Any())
                 {
@@ -72,7 +72,7 @@ namespace AirLive.Controllers
             try
             {
                 List<modelAQI> _AQIs = new List<modelAQI>();
-                _AQIs = sourceAQIs;
+                _AQIs = await initCheck();
                 var filterResult = _AQIs.Where(m => m.County == County).Select(m => m.SiteName);
                 if (filterResult.Any())
                 {
@@ -83,6 +83,13 @@ namespace AirLive.Controllers
             {}
             return BadRequest("查無相關資料");
         }
-
+        private async Task<List<modelAQI>> initCheck()
+        {
+            if (sourceAQIs == null)
+            {
+                return await _AQIService.AQIs();
+            }
+            return sourceAQIs;
+        }
     }
 }

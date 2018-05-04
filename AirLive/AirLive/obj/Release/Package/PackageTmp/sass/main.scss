@@ -21,6 +21,24 @@ $PM10LeveWidth7 : (100% / $totalWidthPM10) * 7;
 .container {
     max-width: 600px;
     margin: 0 auto;
+    .menus{
+        .menuitem{
+            margin: 20px 1px;
+            font-family: Microsoft JhengHei;
+            font-weight: bold;
+            font-size: 20px;
+            .selectbox {
+                //width:100px;
+                select{
+                        width: 100px;
+                        font-size: 15px;
+                        option{
+                            text-align:center;
+                        }
+                }
+            }
+        }
+    }
     .subjectpanel{
         margin: 30px auto;
         .subject{

@@ -1,6 +1,8 @@
 @import "compass/reset";
 body
 {
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 $totalWidthAqi : 300;
 $AqiLeveWidth50 : (100% / $totalWidthAqi) * 50;
@@ -21,6 +23,26 @@ $PM10LeveWidth7 : (100% / $totalWidthPM10) * 7;
 .container {
     max-width: 600px;
     margin: 0 auto;
+    .menus{
+        text-align: center;
+        .menuitem{
+            margin: 20px 1px;
+            font-family: Microsoft JhengHei;
+            font-weight: bold;
+            font-size: 20px;
+            .selectbox {
+                //width:100px;
+                select{
+                        width: 100px;
+                        height: 36px;
+                        font-size: 17px;
+                        option{
+                            text-align:center;
+                        }
+                }
+            }
+        }
+    }
     .subjectpanel{
         margin: 30px auto;
         .subject{
@@ -202,4 +224,10 @@ $PM10LeveWidth7 : (100% / $totalWidthPM10) * 7;
             }
         }
     }
+}
+
+.referencelist{
+    overflow-x: hidden;
+    word-wrap:break-word;
+    padding: 10px;
 }
