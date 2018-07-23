@@ -18,10 +18,11 @@ namespace AirLive.Controllers
         private AQIService _AQIService = new AQIService();
         public ValuesController()
         {
-            Task.Run(async () =>
+            var getSource = Task.Run(async () =>
             {
                 sourceAQIs = await _AQIService.AQIs();
             });
+            Task.WaitAll(getSource);
         }
 
         // GET api/AQIGet

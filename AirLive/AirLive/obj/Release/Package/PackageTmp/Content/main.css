@@ -63,49 +63,60 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 21, ../sass/main.scss */
+/* line 2, ../sass/main.scss */
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* line 23, ../sass/main.scss */
 .container {
   max-width: 600px;
   margin: 0 auto;
 }
-/* line 25, ../sass/main.scss */
+/* line 26, ../sass/main.scss */
+.container .menus {
+  text-align: center;
+}
+/* line 28, ../sass/main.scss */
 .container .menus .menuitem {
   margin: 20px 1px;
   font-family: Microsoft JhengHei;
   font-weight: bold;
   font-size: 20px;
 }
-/* line 32, ../sass/main.scss */
+/* line 35, ../sass/main.scss */
 .container .menus .menuitem .selectbox select {
   width: 100px;
-  font-size: 15px;
+  height: 36px;
+  font-size: 17px;
 }
-/* line 35, ../sass/main.scss */
+/* line 39, ../sass/main.scss */
 .container .menus .menuitem .selectbox select option {
   text-align: center;
 }
-/* line 42, ../sass/main.scss */
+/* line 46, ../sass/main.scss */
 .container .subjectpanel {
   margin: 30px auto;
 }
-/* line 44, ../sass/main.scss */
+/* line 48, ../sass/main.scss */
 .container .subjectpanel .subject {
   text-align: center;
   font-size: 22px;
   font-family: sans-serif;
   font-weight: bold;
 }
-/* line 49, ../sass/main.scss */
+/* line 53, ../sass/main.scss */
 .container .subjectpanel .subject .subjectval {
   color: #03a9f4;
 }
-/* line 54, ../sass/main.scss */
+/* line 58, ../sass/main.scss */
 .container .subjectpanel .levelbar .Indicators {
   color: red;
   width: 30px;
   text-align: center;
 }
-/* line 58, ../sass/main.scss */
+/* line 62, ../sass/main.scss */
 .container .subjectpanel .levelbar .Indicators .airval {
   border: 1px solid #673ab7;
   border-radius: 13px;
@@ -116,13 +127,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   position: relative;
   top: 7px;
 }
-/* line 69, ../sass/main.scss */
+/* line 73, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelaqi {
   font-size: 17px;
   font-weight: bold;
   font-family: sans-serif;
 }
-/* line 73, ../sass/main.scss */
+/* line 77, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelaqi .level {
   display: inline-block;
   width: 16.6vw;
@@ -134,38 +145,38 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       width: calc((100vw / 500) * 200);
   }*/
 }
-/* line 79, ../sass/main.scss */
+/* line 83, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelaqi .level.level1 {
   background-color: #00e400;
   width: 16.66667%;
 }
-/* line 83, ../sass/main.scss */
+/* line 87, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelaqi .level.level2 {
   background-color: #ff0;
   width: 16.66667%;
 }
-/* line 87, ../sass/main.scss */
+/* line 91, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelaqi .level.level3 {
   background-color: #ff7e00;
   width: 16.66667%;
 }
-/* line 91, ../sass/main.scss */
+/* line 95, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelaqi .level.level4 {
   background-color: #f00;
   width: 16.66667%;
 }
-/* line 95, ../sass/main.scss */
+/* line 99, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelaqi .level.level5 {
   background-color: #99004c;
   width: 33.33333%;
 }
-/* line 105, ../sass/main.scss */
+/* line 109, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelpm25 {
   font-size: 17px;
   font-weight: bold;
   font-family: sans-serif;
 }
-/* line 109, ../sass/main.scss */
+/* line 113, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelpm25 .level {
   display: inline-block;
   width: 16.6vw;
@@ -173,69 +184,69 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background-color: #9cff9c;
   line-height: 42px;
 }
-/* line 115, ../sass/main.scss */
+/* line 119, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelpm25 .level.level1 {
   background-color: #9cff9c;
   width: 18.96552%;
 }
-/* line 119, ../sass/main.scss */
+/* line 123, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelpm25 .level.level2 {
   background-color: #31ff00;
   width: 20.68966%;
 }
-/* line 123, ../sass/main.scss */
+/* line 127, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelpm25 .level.level3 {
   background-color: #31cf00;
   width: 20.68966%;
 }
-/* line 127, ../sass/main.scss */
+/* line 131, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelpm25 .level.level4 {
   background-color: #ff0;
   width: 10.34483%;
   font-size: 12px;
 }
-/* line 132, ../sass/main.scss */
+/* line 136, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelpm25 .level.level5 {
   background-color: #ffcf00;
   width: 10.34483%;
   font-size: 12px;
 }
-/* line 137, ../sass/main.scss */
+/* line 141, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelpm25 .level.level6 {
   background-color: #ff9a00;
   width: 10.34483%;
   font-size: 12px;
 }
-/* line 142, ../sass/main.scss */
+/* line 146, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelpm25 .level.level7 {
   background-color: #ff6464;
   width: 8.62069%;
   font-size: 12px;
 }
-/* line 147, ../sass/main.scss */
+/* line 151, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelpm25 .level.level8 {
   background-color: #99004c;
   width: 10.34483%;
   font-size: 12px;
 }
-/* line 152, ../sass/main.scss */
+/* line 156, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelpm25 .level.level9 {
   background-color: #99004c;
   width: 10.34483%;
   font-size: 12px;
 }
-/* line 157, ../sass/main.scss */
+/* line 161, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelpm25 .level.level10 {
   background-color: #99004c;
   width: 1px;
 }
-/* line 163, ../sass/main.scss */
+/* line 167, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelpm10 {
   font-size: 17px;
   font-weight: bold;
   font-family: sans-serif;
 }
-/* line 167, ../sass/main.scss */
+/* line 171, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelpm10 .level {
   display: inline-block;
   width: 16.6vw;
@@ -252,48 +263,55 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       width: 1px;
   }*/
 }
-/* line 173, ../sass/main.scss */
+/* line 177, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelpm10 .level.level1 {
   background-color: #9cff9c;
   width: 18.68132%;
 }
-/* line 177, ../sass/main.scss */
+/* line 181, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelpm10 .level.level2 {
   background-color: #31ff00;
   width: 18.68132%;
 }
-/* line 181, ../sass/main.scss */
+/* line 185, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelpm10 .level.level3 {
   background-color: #31cf00;
   width: 18.68132%;
 }
-/* line 185, ../sass/main.scss */
+/* line 189, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelpm10 .level.level4 {
   background-color: #ff0;
   width: 8.79121%;
   font-size: 12px;
 }
-/* line 190, ../sass/main.scss */
+/* line 194, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelpm10 .level.level5 {
   background-color: #ffcf00;
   width: 8.79121%;
   font-size: 12px;
 }
-/* line 195, ../sass/main.scss */
+/* line 199, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelpm10 .level.level6 {
   background-color: #ff9a00;
   width: 9.89011%;
   font-size: 12px;
 }
-/* line 200, ../sass/main.scss */
+/* line 204, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelpm10 .level.level7 {
   background-color: #ff6464;
   width: 8.79121%;
   font-size: 12px;
 }
-/* line 205, ../sass/main.scss */
+/* line 209, ../sass/main.scss */
 .container .subjectpanel .levelbar.levelpm10 .level.level8 {
   background-color: #ff0000;
   width: 7.69231%;
   font-size: 12px;
+}
+
+/* line 229, ../sass/main.scss */
+.referencelist {
+  overflow-x: hidden;
+  word-wrap: break-word;
+  padding: 10px;
 }

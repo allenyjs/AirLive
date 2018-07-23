@@ -273,6 +273,7 @@
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="config.rb" />
     <Content Include="sass\main.scss" />
+    <Content Include="App_Code\GTM.cshtml" />
     <None Include="Properties\PublishProfiles\airqlive - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\airqlive - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
